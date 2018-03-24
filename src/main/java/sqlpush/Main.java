@@ -1,3 +1,5 @@
+package sqlpush;
+
 import com.google.gson.Gson;
 
 import java.awt.*;
@@ -11,10 +13,8 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
-import javax.sound.midi.Soundbank;
 import javax.swing.*;
 
-import org.apache.http.impl.nio.reactor.ExceptionEvent;
 import org.json.CDL;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -128,12 +128,40 @@ public class Main {
         return items.getJSONObject(id).getJSONObject("selfLink").getString("href");
     }
 
+    public static void pushToSQL(String titre, String keywords, int nbClick, String lien, int articleID){
+
+
+
+        Connection.queryInsert(new String[]{"titre","keywords","click","lien","idArticle"}, new Object[]{titre, keywords, nbClick, lien, articleID});
+
+    }
     public static void pushItems(JSONArray items) {
         for (int j = 0; j < items.length(); j++) {
             try {
-                News news = new News(getLink(items, j));
-                System.out.println( " --Pushing ID: " + news.getID() + " Title: " + news.getTitle() + " URL: " + news.getURL() + " lenght: " + items.length());
-                news.pushToSQL();
+                JSONObject item = items.getJSONObject(j);
+
+
+
+
+                String lien = item.getJSONObject("canonicalWebLink").getString("href");
+                SharedCounts objClicker = new SharedCounts(lien);
+
+                int nbClick = objClicker.getNbClick();
+
+
+                String titre = item.getString("title");
+
+                int articleID = Integer.parseInt(item.getString("id"));
+                Documents kwDoc = new Documents();
+                String summary = item.getString("summary");
+
+                kwDoc.add(articleID + "", "fr", summary );
+                String keywordsXD = Main.getCSVKeyWords(kwDoc);
+
+
+                System.out.println( " --Pushing ID: " + articleID + " Title: " + titre + " URL: " + lien + " lenght: " + items.length());
+
+                pushToSQL(titre, keywordsXD, nbClick, lien, articleID);
             } catch (Exception e) {
 
             }
@@ -146,7 +174,7 @@ public class Main {
         JSONArray lineupArray = lineupList.getItems();
 
 
-        for (int i = 0; i < lineupArray.length(); i++) {
+        for (int i = 453; i < lineupArray.length(); i++) {
 
             try {
                 Lineup lineup = new Lineup(getLink(lineupArray, i));

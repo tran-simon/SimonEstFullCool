@@ -497,7 +497,7 @@
           },
           "alt": "Quatre hommes en uniformes de policie observent dans un périmètre de sécurité. ",
           "legend": "L'Unité des enquêtes spéciales sur les lieux de la fusillade à Windsor mercredi matin. ",
-          "imageCredits": "Dan Taekema/CBC News",
+          "imageCredits": "Dan Taekema/CBC sqlpush.News",
           "pressAgencies": [
             {
               "id": null,
@@ -916,7 +916,7 @@
           },
           "alt": "Vue en contre plongée du vieux bâtiment en briques. On voit bien la pancarte avec l'inscription University of Windsor. ",
           "legend": "La nouvelle école des arts créatifs de l'Université de Windsor a officiellement déménagé dans l'ancien manège militaire situé sur la rue University. ",
-          "imageCredits": "Jason Viau/CBC News",
+          "imageCredits": "Jason Viau/CBC sqlpush.News",
           "pressAgencies": [
             {
               "id": null,

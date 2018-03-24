@@ -1,3 +1,4 @@
+package sqlpush;
 
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
@@ -46,7 +47,7 @@ public class SharedCounts {
         return count;
     }
     
-    private String postOnShared() { //return le id de la requête
+    private String postOnShared() { //return le id de la requï¿½te
         
         int count = 0;
         

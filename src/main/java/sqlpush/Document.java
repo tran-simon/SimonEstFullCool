@@ -1,3 +1,5 @@
+package sqlpush;
+
 class Document {
 	public String id, language, text;
 
