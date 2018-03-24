@@ -4,17 +4,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
-import com.mashape.unirest.http.exceptions.UnirestException;
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.InputStreamReader;
+import org.json.CDL;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import javax.net.ssl.HttpsURLConnection;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import java.io.*;
+import java.util.ArrayList;
 
 class Document {
     public String id, language, text;
@@ -38,7 +37,7 @@ class Documents {
 }
 
 public class Main {
-
+  
     final static String API_KEY = "feb29daae1dc4f2eb888862eb560400d";
     final static String HOST = "https://westcentralus.api.cognitive.microsoft" +
                                ".com";
@@ -70,14 +69,7 @@ public class Main {
 
         return response.toString();
     }
-
-    public static String prettify(String json_text) {
-        JsonParser parser = new JsonParser ();
-        JsonObject json   = parser.parse(json_text).getAsJsonObject();
-        Gson       gson   = new GsonBuilder ().setPrettyPrinting().create();
-        return gson.toJson(json);
-    }
-
+  
     public static String getCSVKeyWords(Documents documents) {
         String response = "";
         try {
@@ -106,46 +98,75 @@ public class Main {
         sb.deleteCharAt (sb.length () - 1);
         return sb.toString ();
     }
+  
+    public static void writeCSVToFile(String csv, File file) {
+        file.delete();
 
-    public static JSONArray getItems(HttpResponse<String> response) {
-        JSONObject jsonObject = new JSONObject(response);
-
-        Iterator iterator = jsonObject.keys();
-
-        while(iterator.hasNext ()) {
-            System.out.println (iterator.next ());
+        try {
+            PrintWriter out = new PrintWriter(file.getPath());
+            out.println(csv);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
-
-        JSONObject body = new JSONObject(jsonObject.getString("body"));
-        JSONObject pagedList = body.getJSONObject("pagedList");
-//        System.out.println(pagedList.get("items").getClass());
-        JSONArray jsonArray = pagedList.getJSONArray("items");
-
-        return jsonArray;
     }
 
-    public static void main(String[] args) throws Exception {
-        // use example
+    public static String readFile(String filePath) {
+        StringBuilder contentBuilder = new StringBuilder();
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(filePath));
+
+            String sCurrentLine;
+            while ((sCurrentLine = br.readLine()) != null) {
+                contentBuilder.append(sCurrentLine).append("\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return contentBuilder.toString();
+    }
+
+    public static void writeToFile(String filePath, String content) {
+        try {
+            PrintWriter writer = new PrintWriter(filePath, "UTF-8");
+            writer.println(content);
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static String getCSVString(JSONArray object) {
+        return CDL.toString(object);
+    }
+
+    public static String getLink(JSONArray items, int id){
+        return items.getJSONObject(id).getJSONObject("selfLink").getString("href");
+    }
+
+
+    public static void main(String[] args) {
+        String link = "https://services.radio-canada.ca/hackathon/neuro/v1/future/lineups/475289?pageNumber=1";
+        Lineup lineup = new Lineup(link);
+
+        JSONArray items = lineup.getItems();
+
+        link = getLink(items, 3);
+        News news = new News(link);
+
+        writeToFile("XD.html", news.getHTML());
+
+        System.out.println(news);
+        System.out.println(news.names());
+
+        System.out.println(news.getSummary() + "");
+        System.out.println(news.getTitle());
+        String keywords = " tseting testing TEST HACKATHON";
+        Connection.queryInsert(keywords,  news.getTitle(), 2);
+      
+        // keyword query use example
         Documents documents = new Documents ();
         documents.add ("1", "en", "I really enjoy the new XBox One S. It has a clean look, it has 4K/HDR resolution and it is affordable.");
         System.out.println (getCSVKeyWords (documents));
-
-
-        try {
-            HttpResponse<String> response = Unirest
-                .get("https://services.radio-canada.ca/hackathon/neuro/v1/future/lineups/475289?pageNumber=1")
-                    .header("Authorization", "Client-Key bf9ac6d8-9ad8-4124-a63c-7b7bdf22a2ee")
-                    .header("Cache-Control", "no-cache")
-                    .header("Postman-Token", "8064e4a8-c861-48d8-9fd5-bc8ce25e0960")
-                    .asString();
-
-
-            JSONArray items = getItems(response);
-
-            System.out.println(items.getJSONObject(0).get("selfLink"));
-
-        } catch (UnirestException e) {
-            e.printStackTrace();
-        }
     }
 }
