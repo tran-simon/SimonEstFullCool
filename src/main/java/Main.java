@@ -65,11 +65,11 @@ public class Main {
 
         link = getLink(items, 0);
         News news = new News(link);
-        System.out.println(news.toString());
-        System.out.println(news.getTitle());
-        System.out.println(news.getID());
-        System.out.println(news.getString("summary"));
-        System.out.println(news.getHTML());
+//        System.out.println(news.toString());
+//        System.out.println(news.getTitle());
+//        System.out.println(news.getID());
+//        System.out.println(news.getString("summary"));
+//        System.out.println(news.getHTML());
         writeToFile("XD.html", news.getHTML());
         
         SharedCounts objClicker = new SharedCounts(news.getURL());

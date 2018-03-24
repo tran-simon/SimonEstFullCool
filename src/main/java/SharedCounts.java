@@ -1,7 +1,15 @@
 
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.Unirest;
+import com.mashape.unirest.http.exceptions.UnirestException;
+import java.io.BufferedReader;
 import java.io.DataOutputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -25,51 +33,39 @@ public class SharedCounts {
     }
     
     public int getNbClick() {
+        int count = 0;
+        JSONObject responseJSON;
         
-        HttpURLConnection connection = null;
-
+        responseJSON = new JSONObject(postOnShared());
+        
+        count = responseJSON.getInt("StumbleUpon");
+        count += responseJSON.getJSONObject("Facebook").getInt("total_count");
+        count += responseJSON.getInt("Pinterest");
+        
+        
+        return count;
+    }
+    
+    private String postOnShared() { //return le id de la requête
+        
+        int count = 0;
+        
+        String bodyString = "";
+        String url = DOMAIN + "?" + "apikey=" + APIKEY + "&" + "url=" + this.url;
         try {
-          //Create connection
-          URL url = new URL(DOMAIN);
-          connection = (HttpURLConnection) url.openConnection();
-          connection.setRequestMethod("POST");
-          connection.setRequestProperty("Content-Type", 
-              "application/x-www-form-urlencoded");
+            HttpResponse<String> response = Unirest.get(url).asString();
+            bodyString = response.getBody();
 
-          connection.setRequestProperty("Content-Length", 
-              Integer.toString(urlParameters.getBytes().length));
-          connection.setRequestProperty("Content-Language", "en-US");  
-
-          connection.setUseCaches(false);
-          connection.setDoOutput(true);
-
-          //Send request
-          DataOutputStream wr = new DataOutputStream (
-              connection.getOutputStream());
-          wr.writeBytes(urlParameters);
-          wr.close();
-
-          //Get Response  
-          InputStream is = connection.getInputStream();
-          BufferedReader rd = new BufferedReader(new InputStreamReader(is));
-          StringBuilder response = new StringBuilder(); // or StringBuffer if Java version 5+
-          String line;
-          while ((line = rd.readLine()) != null) {
-            response.append(line);
-            response.append('\r');
-          }
-          rd.close();
-          return response.toString();
         } catch (Exception e) {
-          e.printStackTrace();
-          return null;
-        } finally {
-          if (connection != null) {
-            connection.disconnect();
-          }
+            bodyString = "";
         }
         
+        /*
+        if(responseJSON.get("LinkedIn") != null){
+            count += responseJSON.getInt("LinkedIn");
+        }*/
         
-        return 0;
+        return bodyString;
     }
+    
 }
