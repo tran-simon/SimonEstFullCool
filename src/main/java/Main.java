@@ -79,12 +79,13 @@ public class Main {
         JSONArray items = getItems(getBodyString());
         String path = "items.csv";
         writeCSVToFile(CDL.toString(items), new File(path));
-        System.out.println(getLink(items, 1));
-
 
         String link = getLink(items, 1);
         News news = new News(link);
-        System.out.println(news.getBody());
+        System.out.println(news.toString());
+        System.out.println(news.getTitle());
+        System.out.println(news.getID());
+        System.out.println(news.getString("summary"));
 //        News news = new News(items);
     }
 }

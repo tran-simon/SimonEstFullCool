@@ -3,13 +3,13 @@ import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.json.JSONObject;
 
-public class News {
-    private String body = "";
+public class News extends JSONObject{
 
     public News(String link) {
-        getBody(link);
+        super(getBody(link));
     }
-    public void getBody(String link){
+    public static String getBody(String link){
+        String body = "";
         try {
             HttpResponse<String> response = Unirest.get(link)
                     .header("Authorization", "Client-Key bf9ac6d8-9ad8-4124-a63c-7b7bdf22a2ee")
@@ -25,18 +25,16 @@ public class News {
             System.out.println("BODY EMPTY");
             System.exit(0);
         }
-
-
-    }
-
-    public JSONObject getBodyObject(){
-        return new JSONObject(body);
-    }
-    public String getBody() {
         return body;
+
     }
 
-    public void setBody(String body) {
-        this.body = body;
+    public String getTitle(){
+        return this.getString("title");
     }
+
+    public String getID(){
+        return this.getString("id");
+    }
+
 }
