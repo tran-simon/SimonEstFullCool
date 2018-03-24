@@ -44,4 +44,9 @@ public class News extends JSONObject{
     public String getHTML(){
         return getBody().getString("html");
     }
+    public String getURL() {
+        JSONObject jsonObj = this.getJSONObject("canonicalWebLink");
+        
+        return jsonObj.getString("href");
+    }
 }

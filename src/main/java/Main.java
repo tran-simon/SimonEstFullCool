@@ -56,7 +56,7 @@ public class Main {
         return items.getJSONObject(id).getJSONObject("selfLink").getString("href");
     }
     public static void main(String[] args) {
-
+        int nbClick = 0;
         String link = "https://services.radio-canada.ca/hackathon/neuro/v1/future/lineups/475289?pageNumber=1";
         Lineup lineup = new Lineup(link);
         JSONArray items = lineup.getItems();
@@ -71,6 +71,10 @@ public class Main {
         System.out.println(news.getString("summary"));
         System.out.println(news.getHTML());
         writeToFile("XD.html", news.getHTML());
+        
+        SharedCounts objClicker = new SharedCounts(news.getURL());
+        nbClick = objClicker.getNbClick();
+        System.out.println(nbClick);
 //        News news = new News(items);
     }
 }
