@@ -1,0 +1,1443 @@
+{
+  "selfLink": {
+    "href": "https://services.radio-canada.ca/hackathon/neuro/v1/future/lineups/475289?pageNumber=1"
+  },
+  "stickyLineupLink": null,
+  "id": "475289",
+  "name": "Région - Ontario - Windsor",
+  "title": "Région - Ontario - Windsor",
+  "summary": "",
+  "summaryMultimediaContent": null,
+  "template": null,
+  "category": {
+    "id": "1",
+    "name": "Conducteur"
+  },
+  "pagedList": {
+    "firstPageLink": {
+      "href": "https://services.radio-canada.ca/hackathon/neuro/v1/future/lineups/475289?pageNumber=1"
+    },
+    "previousPageLink": null,
+    "nextPageLink": {
+      "href": "https://services.radio-canada.ca/hackathon/neuro/v1/future/lineups/475289?pageNumber=2"
+    },
+    "lastPageLink": {
+      "href": "https://services.radio-canada.ca/hackathon/neuro/v1/future/lineups/475289?pageNumber=5"
+    },
+    "totalNumOfItems": 47,
+    "pageNumber": 1,
+    "pageSize": 10,
+    "items": [
+      {
+        "$type": "RC.Neuro.Dtos.v1.FutureContentItemSummary, RC.Neuro.Dtos",
+        "selfLink": {
+          "href": "https://services.radio-canada.ca/hackathon/neuro/v1/news-stories/1091226"
+        },
+        "canonicalWebLink": {
+          "href": "http://ici.radio-canada.ca/nouvelle/1091226/francophonie-marc-yvain-giroux-radio-cjbc"
+        },
+        "contentType": {
+          "id": "11",
+          "name": "Nouvelle"
+        },
+        "id": "1091226",
+        "primaryClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles",
+          "codeName": "nouvelle"
+        },
+        "title": "Marc-Yvain Giroux quitte la Maison de la culture francophone du Niagara",
+        "summary": "<p>À 86 ans, le pionnier Franco-Ontarien et président du conseil d'administration de la Maison de la culture francophone du Niagara tire sa révérence.</p>",
+        "outOfContextTitle": "Marc-Yvain Giroux quitte la Maison de la culture francophone du Niagara",
+        "kicker": "",
+        "futurePublishedLastTimeAt": "2018-03-23T23:50:45.000Z",
+        "template": null,
+        "themeTag": {
+          "id": "17",
+          "name": "Société"
+        },
+        "subThemeTags": [
+          {
+            "id": "51",
+            "name": "Francophonie"
+          }
+        ],
+        "regionTags": [
+          {
+            "id": "27",
+            "name": "Toronto"
+          },
+          {
+            "id": "28",
+            "name": "Windsor"
+          }
+        ],
+        "isOfRegionalInterestOnly": false,
+        "subjectTags": [],
+        "customTags": [],
+        "sector": {
+          "id": "1",
+          "name": "Info"
+        },
+        "subSector": {
+          "id": "24",
+          "name": "Toronto"
+        },
+        "broadcastableItem": null,
+        "signatures": [],
+        "referredContent": null,
+        "summaryMultimediaItem": {
+          "$type": "RC.Neuro.Dtos.v1.ConceptualImage, RC.Neuro.Dtos",
+          "contentType": {
+            "id": "19",
+            "name": "Image (Picto)"
+          },
+          "alt": "Marc-Yvain Giroux assis à son micro pendant une entrevue radiophonique.",
+          "legend": "Le directeur de la Maison de la culture de Welland, Marc-Yvain Giroux.",
+          "imageCredits": "Michel Laforge",
+          "pressAgencies": [
+            {
+              "id": null,
+              "name": "Radio-Canada",
+              "codeName": "Radio-Canada"
+            }
+          ],
+          "imageCollection": "",
+          "concreteImages": [
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-premiere/1x1/marc-yvain-giroux-glc-welland.JPG"
+              },
+              "width": 2447,
+              "height": 2447,
+              "dimensionRatio": "1:1"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-premiere/16x9/marc-yvain-giroux-glc-welland.JPG"
+              },
+              "width": 2697,
+              "height": 1517,
+              "dimensionRatio": "16:9"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-premiere/17x6/marc-yvain-giroux-glc-welland.JPG"
+              },
+              "width": 3263,
+              "height": 1152,
+              "dimensionRatio": "17:6"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-premiere/2x3/marc-yvain-giroux-glc-welland.JPG"
+              },
+              "width": 1631,
+              "height": 2447,
+              "dimensionRatio": "2:3"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-premiere/4x3/marc-yvain-giroux-glc-welland.JPG"
+              },
+              "width": 3263,
+              "height": 2447,
+              "dimensionRatio": "4:3"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-premiere/perso/marc-yvain-giroux-glc-welland.JPG"
+              },
+              "width": 3263,
+              "height": 2448,
+              "dimensionRatio": "perso"
+            }
+          ]
+        },
+        "relatedContents": [],
+        "contentTypeClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles"
+        },
+        "publishedLastTimeAt": "2018-03-23T23:50:45.000Z"
+      },
+      {
+        "$type": "RC.Neuro.Dtos.v1.FutureContentItemSummary, RC.Neuro.Dtos",
+        "selfLink": {
+          "href": "https://services.radio-canada.ca/hackathon/neuro/v1/news-stories/1091216"
+        },
+        "canonicalWebLink": {
+          "href": "http://ici.radio-canada.ca/nouvelle/1091216/le-policier-qui-roulait-a-178-km-h-dans-une-zone-de-50-deboute-en-appel"
+        },
+        "contentType": {
+          "id": "11",
+          "name": "Nouvelle"
+        },
+        "id": "1091216",
+        "primaryClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles",
+          "codeName": "nouvelle"
+        },
+        "title": "Le policier qui roulait à 178 km/h dans une zone de 50 débouté en appel",
+        "summary": "<p>Un policier qui avait causé un accident en répondant à un appel d'urgence parce qu'il filait à 178 km/h dans une zone de 50 a été débouté en Cour d'appel de l'Ontario.</p>",
+        "outOfContextTitle": "Le policier qui roulait à 178 km/h dans une zone de 50 débouté en appel",
+        "kicker": "",
+        "futurePublishedLastTimeAt": "2018-03-23T22:53:42.000Z",
+        "template": null,
+        "themeTag": {
+          "id": "18",
+          "name": "Justice et faits divers"
+        },
+        "subThemeTags": [
+          {
+            "id": "178",
+            "name": "Forces policières"
+          }
+        ],
+        "regionTags": [
+          {
+            "id": "27",
+            "name": "Toronto"
+          },
+          {
+            "id": "28",
+            "name": "Windsor"
+          }
+        ],
+        "isOfRegionalInterestOnly": false,
+        "subjectTags": [],
+        "customTags": [],
+        "sector": {
+          "id": "1",
+          "name": "Info"
+        },
+        "subSector": {
+          "id": "24",
+          "name": "Toronto"
+        },
+        "broadcastableItem": null,
+        "signatures": [],
+        "referredContent": null,
+        "summaryMultimediaItem": {
+          "$type": "RC.Neuro.Dtos.v1.ConceptualImage, RC.Neuro.Dtos",
+          "contentType": {
+            "id": "19",
+            "name": "Image (Picto)"
+          },
+          "alt": "La statue représentant la justice.",
+          "legend": "La justice. ",
+          "imageCredits": "",
+          "pressAgencies": [
+            {
+              "id": null,
+              "name": "iStock",
+              "codeName": "iStock"
+            }
+          ],
+          "imageCollection": "",
+          "concreteImages": [
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/1x1/justice-jure-jury-tribunal-justice-generique.jpg"
+              },
+              "width": 460,
+              "height": 461,
+              "dimensionRatio": "1:1"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/16x9/justice-jure-jury-tribunal-justice-generique.jpg"
+              },
+              "width": 757,
+              "height": 426,
+              "dimensionRatio": "16:9"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/17x6/justice-jure-jury-tribunal-justice-generique.jpg"
+              },
+              "width": 757,
+              "height": 268,
+              "dimensionRatio": "17:6"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/2x3/justice-jure-jury-tribunal-justice-generique.jpg"
+              },
+              "width": 306,
+              "height": 461,
+              "dimensionRatio": "2:3"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/4x3/justice-jure-jury-tribunal-justice-generique.jpg"
+              },
+              "width": 614,
+              "height": 461,
+              "dimensionRatio": "4:3"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/perso/justice-jure-jury-tribunal-justice-generique.jpg"
+              },
+              "width": 757,
+              "height": 461,
+              "dimensionRatio": "perso"
+            }
+          ]
+        },
+        "relatedContents": [],
+        "contentTypeClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles"
+        },
+        "publishedLastTimeAt": "2018-03-23T22:53:42.000Z"
+      },
+      {
+        "$type": "RC.Neuro.Dtos.v1.FutureContentItemSummary, RC.Neuro.Dtos",
+        "selfLink": {
+          "href": "https://services.radio-canada.ca/hackathon/neuro/v1/news-stories/1091087"
+        },
+        "canonicalWebLink": {
+          "href": "http://ici.radio-canada.ca/nouvelle/1091087/sunshine-list-fonctionnaires-100000-dollars-ontario"
+        },
+        "contentType": {
+          "id": "11",
+          "name": "Nouvelle"
+        },
+        "id": "1091087",
+        "primaryClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles",
+          "codeName": "nouvelle"
+        },
+        "title": "La Sunshine List continue de croître en Ontario",
+        "summary": "<p>Plus de 131 000 noms figurent cette année sur la liste de Divulgation des salaires des employés des secteurs public et parapublic de l'Ontario qui touchent une rémunération de 100&nbsp;000&nbsp;$ et plus.</p>",
+        "outOfContextTitle": "La Sunshine List des employés provinciaux gagnant 100 000 $ et plus continue de croître en Ontario",
+        "kicker": "",
+        "futurePublishedLastTimeAt": "2018-03-23T17:30:05.000Z",
+        "template": null,
+        "themeTag": {
+          "id": "13",
+          "name": "Politique"
+        },
+        "subThemeTags": [
+          {
+            "id": "102",
+            "name": "Politique provinciale"
+          }
+        ],
+        "regionTags": [
+          {
+            "id": "26",
+            "name": "Nord de l'Ontario"
+          },
+          {
+            "id": "27",
+            "name": "Toronto"
+          },
+          {
+            "id": "28",
+            "name": "Windsor"
+          }
+        ],
+        "isOfRegionalInterestOnly": true,
+        "subjectTags": [],
+        "customTags": [
+          {
+            "category": {
+              "id": "f0a27ed8-5260-41dd-81b8-97365f8624ea",
+              "name": "Régions"
+            },
+            "id": "89ac6c3e-fd4d-42ab-b7a3-fb97fbf5c341",
+            "name": "Tout l'Ontario"
+          }
+        ],
+        "sector": {
+          "id": "1",
+          "name": "Info"
+        },
+        "subSector": {
+          "id": "24",
+          "name": "Toronto"
+        },
+        "broadcastableItem": null,
+        "signatures": [],
+        "referredContent": null,
+        "summaryMultimediaItem": {
+          "$type": "RC.Neuro.Dtos.v1.ConceptualImage, RC.Neuro.Dtos",
+          "contentType": {
+            "id": "19",
+            "name": "Image (Picto)"
+          },
+          "alt": "7 volumes tenus par des mains.",
+          "legend": "La Sunshine List de cette année compte sept volumes.",
+          "imageCredits": "Julie-Anne Lamoureux",
+          "pressAgencies": [
+            {
+              "id": null,
+              "name": "Radio-Canada",
+              "codeName": "Radio-Canada"
+            }
+          ],
+          "imageCollection": "",
+          "concreteImages": [
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/1x1/sunshine-list-2017.JPG"
+              },
+              "width": 3023,
+              "height": 3023,
+              "dimensionRatio": "1:1"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/16x9/sunshine-list-2017.JPG"
+              },
+              "width": 4031,
+              "height": 2267,
+              "dimensionRatio": "16:9"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/17x6/sunshine-list-2017.JPG"
+              },
+              "width": 4031,
+              "height": 1423,
+              "dimensionRatio": "17:6"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/2x3/sunshine-list-2017.JPG"
+              },
+              "width": 2015,
+              "height": 3023,
+              "dimensionRatio": "2:3"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/4x3/sunshine-list-2017.JPG"
+              },
+              "width": 4031,
+              "height": 3023,
+              "dimensionRatio": "4:3"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/perso/sunshine-list-2017.JPG"
+              },
+              "width": 4031,
+              "height": 3024,
+              "dimensionRatio": "perso"
+            }
+          ]
+        },
+        "relatedContents": [],
+        "contentTypeClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles"
+        },
+        "publishedLastTimeAt": "2018-03-23T17:30:05.000Z"
+      },
+      {
+        "$type": "RC.Neuro.Dtos.v1.FutureContentItemSummary, RC.Neuro.Dtos",
+        "selfLink": {
+          "href": "https://services.radio-canada.ca/hackathon/neuro/v1/news-stories/1091085"
+        },
+        "canonicalWebLink": {
+          "href": "http://ici.radio-canada.ca/nouvelle/1091085/fusillade-a-windsor-les-policiers-ont-tire-plusieurs-coups-de-feu-sur-un-homme"
+        },
+        "contentType": {
+          "id": "11",
+          "name": "Nouvelle"
+        },
+        "id": "1091085",
+        "primaryClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles",
+          "codeName": "nouvelle"
+        },
+        "title": "Fusillade à Windsor&nbsp;:&nbsp;les policiers ont tiré plusieurs coups de feu sur un homme",
+        "summary": "<p>Deux&nbsp;policiers ont vidé leurs chargeurs et atteint plusieurs fois un homme lorsqu'ils sont intervenus au centre-ville de Windsor mercredi, indiquent les premiers éléments de l'enquête de l'Unité des enquêtes spéciales.</p>",
+        "outOfContextTitle": "Fusillade à Windsor : les policiers ont tiré plusieurs coups de feu sur un homme",
+        "kicker": "",
+        "futurePublishedLastTimeAt": "2018-03-23T16:09:40.000Z",
+        "template": null,
+        "themeTag": {
+          "id": "18",
+          "name": "Justice et faits divers"
+        },
+        "subThemeTags": [],
+        "regionTags": [
+          {
+            "id": "28",
+            "name": "Windsor"
+          }
+        ],
+        "isOfRegionalInterestOnly": true,
+        "subjectTags": [],
+        "customTags": [],
+        "sector": {
+          "id": "1",
+          "name": "Info"
+        },
+        "subSector": {
+          "id": "25",
+          "name": "Windsor"
+        },
+        "broadcastableItem": null,
+        "signatures": [],
+        "referredContent": null,
+        "summaryMultimediaItem": {
+          "$type": "RC.Neuro.Dtos.v1.ConceptualImage, RC.Neuro.Dtos",
+          "contentType": {
+            "id": "19",
+            "name": "Image (Picto)"
+          },
+          "alt": "Quatre hommes en uniformes de policie observent dans un périmètre de sécurité. ",
+          "legend": "L'Unité des enquêtes spéciales sur les lieux de la fusillade à Windsor mercredi matin. ",
+          "imageCredits": "Dan Taekema/CBC News",
+          "pressAgencies": [
+            {
+              "id": null,
+              "name": "Radio-Canada",
+              "codeName": "Radio-Canada"
+            }
+          ],
+          "imageCollection": "",
+          "concreteImages": [
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/1x1/police-windsor-fusillade.jpg"
+              },
+              "width": 2559,
+              "height": 2560,
+              "dimensionRatio": "1:1"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/16x9/police-windsor-fusillade.jpg"
+              },
+              "width": 3839,
+              "height": 2160,
+              "dimensionRatio": "16:9"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/17x6/police-windsor-fusillade.jpg"
+              },
+              "width": 3839,
+              "height": 1355,
+              "dimensionRatio": "17:6"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/2x3/police-windsor-fusillade.jpg"
+              },
+              "width": 1706,
+              "height": 2560,
+              "dimensionRatio": "2:3"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/4x3/police-windsor-fusillade.jpg"
+              },
+              "width": 3412,
+              "height": 2560,
+              "dimensionRatio": "4:3"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/perso/police-windsor-fusillade.jpg"
+              },
+              "width": 3839,
+              "height": 2560,
+              "dimensionRatio": "perso"
+            }
+          ]
+        },
+        "relatedContents": [],
+        "contentTypeClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles"
+        },
+        "publishedLastTimeAt": "2018-03-23T16:09:40.000Z"
+      },
+      {
+        "$type": "RC.Neuro.Dtos.v1.FutureContentItemSummary, RC.Neuro.Dtos",
+        "selfLink": {
+          "href": "https://services.radio-canada.ca/hackathon/neuro/v1/news-stories/1090109"
+        },
+        "canonicalWebLink": {
+          "href": "http://ici.radio-canada.ca/nouvelle/1090109/crise-immersion-conseils-scolaires-francophones"
+        },
+        "contentType": {
+          "id": "11",
+          "name": "Nouvelle"
+        },
+        "id": "1090109",
+        "primaryClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles",
+          "codeName": "nouvelle"
+        },
+        "title": "Crise de l’immersion : une bonne affaire pour les conseils scolaires francophones?",
+        "summary": "<p>La fermeture de plusieurs programmes d'immersion française pourrait se traduire par une hausse du nombre d'élèves dans les écoles francophones de l'Ontario, un phénomène qui pourrait ne pas être aussi positif qu'il en a l'air.</p>",
+        "outOfContextTitle": "Crise de l’immersion : une bonne affaire pour les conseils scolaires francophones?",
+        "kicker": "",
+        "futurePublishedLastTimeAt": "2018-03-23T09:33:51.000Z",
+        "template": null,
+        "themeTag": {
+          "id": "17",
+          "name": "Société"
+        },
+        "subThemeTags": [
+          {
+            "id": "27",
+            "name": "Éducation"
+          },
+          {
+            "id": "51",
+            "name": "Francophonie"
+          }
+        ],
+        "regionTags": [
+          {
+            "id": "26",
+            "name": "Nord de l'Ontario"
+          },
+          {
+            "id": "27",
+            "name": "Toronto"
+          },
+          {
+            "id": "28",
+            "name": "Windsor"
+          }
+        ],
+        "isOfRegionalInterestOnly": true,
+        "subjectTags": [],
+        "customTags": [
+          {
+            "category": {
+              "id": "f0a27ed8-5260-41dd-81b8-97365f8624ea",
+              "name": "Régions"
+            },
+            "id": "89ac6c3e-fd4d-42ab-b7a3-fb97fbf5c341",
+            "name": "Tout l'Ontario"
+          }
+        ],
+        "sector": {
+          "id": "1",
+          "name": "Info"
+        },
+        "subSector": {
+          "id": "25",
+          "name": "Windsor"
+        },
+        "broadcastableItem": null,
+        "signatures": [],
+        "referredContent": null,
+        "summaryMultimediaItem": {
+          "$type": "RC.Neuro.Dtos.v1.ConceptualImage, RC.Neuro.Dtos",
+          "contentType": {
+            "id": "19",
+            "name": "Image (Picto)"
+          },
+          "alt": "Un garçon et une fille souriants écrivent à l'école",
+          "legend": "La pénurie d'enseignants de langue française dans les programmes d'immersion pourrait se traduire par un surplus d'élèves dans les écoles francophones de l'Ontario.",
+          "imageCredits": "Istock",
+          "pressAgencies": [],
+          "imageCollection": "",
+          "concreteImages": [
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/1x1/pdj-eleves-ecole.jpg"
+              },
+              "width": 702,
+              "height": 703,
+              "dimensionRatio": "1:1"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/16x9/pdj-eleves-ecole.jpg"
+              },
+              "width": 1249,
+              "height": 703,
+              "dimensionRatio": "16:9"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/17x6/pdj-eleves-ecole.jpg"
+              },
+              "width": 1249,
+              "height": 441,
+              "dimensionRatio": "17:6"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/2x3/pdj-eleves-ecole.jpg"
+              },
+              "width": 468,
+              "height": 703,
+              "dimensionRatio": "2:3"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/4x3/pdj-eleves-ecole.jpg"
+              },
+              "width": 936,
+              "height": 703,
+              "dimensionRatio": "4:3"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/perso/pdj-eleves-ecole.jpg"
+              },
+              "width": 1249,
+              "height": 703,
+              "dimensionRatio": "perso"
+            }
+          ]
+        },
+        "relatedContents": [],
+        "contentTypeClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles"
+        },
+        "publishedLastTimeAt": "2018-03-23T09:33:51.000Z"
+      },
+      {
+        "$type": "RC.Neuro.Dtos.v1.FutureContentItemSummary, RC.Neuro.Dtos",
+        "selfLink": {
+          "href": "https://services.radio-canada.ca/hackathon/neuro/v1/news-stories/1090839"
+        },
+        "canonicalWebLink": {
+          "href": "http://ici.radio-canada.ca/nouvelle/1090839/hotel-ville-sarnia-climat-harcelement-maire"
+        },
+        "contentType": {
+          "id": "11",
+          "name": "Nouvelle"
+        },
+        "id": "1090839",
+        "primaryClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles",
+          "codeName": "nouvelle"
+        },
+        "title": "À&nbsp;l'ombre du mur de l'hôtel de ville de Sarnia, des tensions persistent",
+        "summary": "<p>Plus d'un an après que plusieurs rapports aient souligné les comportements de harcèlement et d'intimidation du maire de Sarnia, Mike Bradley, les relations entre les conseillers municipaux sont toujours difficiles, et ce, malgré les sanctions imposées au maire.</p>",
+        "outOfContextTitle": "Climat politique toujours tendu à l'hôtel de ville de Sarnia",
+        "kicker": "",
+        "futurePublishedLastTimeAt": "2018-03-23T16:16:52.000Z",
+        "template": null,
+        "themeTag": {
+          "id": "13",
+          "name": "Politique"
+        },
+        "subThemeTags": [
+          {
+            "id": "203",
+            "name": "Politique municipale"
+          }
+        ],
+        "regionTags": [
+          {
+            "id": "26",
+            "name": "Nord de l'Ontario"
+          },
+          {
+            "id": "27",
+            "name": "Toronto"
+          },
+          {
+            "id": "28",
+            "name": "Windsor"
+          }
+        ],
+        "isOfRegionalInterestOnly": true,
+        "subjectTags": [],
+        "customTags": [
+          {
+            "category": {
+              "id": "f0a27ed8-5260-41dd-81b8-97365f8624ea",
+              "name": "Régions"
+            },
+            "id": "89ac6c3e-fd4d-42ab-b7a3-fb97fbf5c341",
+            "name": "Tout l'Ontario"
+          }
+        ],
+        "sector": {
+          "id": "1",
+          "name": "Info"
+        },
+        "subSector": {
+          "id": "25",
+          "name": "Windsor"
+        },
+        "broadcastableItem": null,
+        "signatures": [],
+        "referredContent": null,
+        "summaryMultimediaItem": {
+          "$type": "RC.Neuro.Dtos.v1.ConceptualImage, RC.Neuro.Dtos",
+          "contentType": {
+            "id": "19",
+            "name": "Image (Picto)"
+          },
+          "alt": "Grand bâtiment avec beaucoup de fenêtres. On peut voir les armoiries de la ville près de l'entrée. ",
+          "legend": "L'hôtel de ville de Sarnia. ",
+          "imageCredits": "Colin Côté-Paulette",
+          "pressAgencies": [
+            {
+              "id": null,
+              "name": "Radio-Canada",
+              "codeName": "Radio-Canada"
+            }
+          ],
+          "imageCollection": "",
+          "concreteImages": [
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/1x1/hotel-de-ville-sarnia.JPG"
+              },
+              "width": 3079,
+              "height": 3080,
+              "dimensionRatio": "1:1"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/16x9/hotel-de-ville-sarnia.JPG"
+              },
+              "width": 5471,
+              "height": 3078,
+              "dimensionRatio": "16:9"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/17x6/hotel-de-ville-sarnia.JPG"
+              },
+              "width": 5471,
+              "height": 1931,
+              "dimensionRatio": "17:6"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/2x3/hotel-de-ville-sarnia.JPG"
+              },
+              "width": 2052,
+              "height": 3080,
+              "dimensionRatio": "2:3"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/4x3/hotel-de-ville-sarnia.JPG"
+              },
+              "width": 4106,
+              "height": 3080,
+              "dimensionRatio": "4:3"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/perso/hotel-de-ville-sarnia.JPG"
+              },
+              "width": 5471,
+              "height": 3080,
+              "dimensionRatio": "perso"
+            }
+          ]
+        },
+        "relatedContents": [],
+        "contentTypeClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles"
+        },
+        "publishedLastTimeAt": "2018-03-23T16:16:52.000Z"
+      },
+      {
+        "$type": "RC.Neuro.Dtos.v1.FutureContentItemSummary, RC.Neuro.Dtos",
+        "selfLink": {
+          "href": "https://services.radio-canada.ca/hackathon/neuro/v1/news-stories/1091042"
+        },
+        "canonicalWebLink": {
+          "href": "http://ici.radio-canada.ca/nouvelle/1091042/lecole-des-arts-creatifs-de-luniversite-de-windsor-officiellement-ouverte"
+        },
+        "contentType": {
+          "id": "11",
+          "name": "Nouvelle"
+        },
+        "id": "1091042",
+        "primaryClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles",
+          "codeName": "nouvelle"
+        },
+        "title": "L'École des arts créatifs de l'Université de Windsor officiellement ouverte",
+        "summary": "<p>La nouvelle école des arts créatifs de l'Université de Windsor a été inaugurée jeudi. La cérémonie d'ouverture du projet de 60&nbsp;M$ s'est déroulée devant les hautes instances de l'université, les élus locaux et d'anciens soldats.</p>",
+        "outOfContextTitle": "L'École des arts créatifs de l'Université de Windsor officiellement ouverte",
+        "kicker": "",
+        "futurePublishedLastTimeAt": "2018-03-23T16:03:16.000Z",
+        "template": null,
+        "themeTag": {
+          "id": "17",
+          "name": "Société"
+        },
+        "subThemeTags": [
+          {
+            "id": "27",
+            "name": "Éducation"
+          }
+        ],
+        "regionTags": [
+          {
+            "id": "28",
+            "name": "Windsor"
+          }
+        ],
+        "isOfRegionalInterestOnly": true,
+        "subjectTags": [],
+        "customTags": [],
+        "sector": {
+          "id": "1",
+          "name": "Info"
+        },
+        "subSector": {
+          "id": "25",
+          "name": "Windsor"
+        },
+        "broadcastableItem": null,
+        "signatures": [],
+        "referredContent": null,
+        "summaryMultimediaItem": {
+          "$type": "RC.Neuro.Dtos.v1.ConceptualImage, RC.Neuro.Dtos",
+          "contentType": {
+            "id": "19",
+            "name": "Image (Picto)"
+          },
+          "alt": "Vue en contre plongée du vieux bâtiment en briques. On voit bien la pancarte avec l'inscription University of Windsor. ",
+          "legend": "La nouvelle école des arts créatifs de l'Université de Windsor a officiellement déménagé dans l'ancien manège militaire situé sur la rue University. ",
+          "imageCredits": "Jason Viau/CBC News",
+          "pressAgencies": [
+            {
+              "id": null,
+              "name": "Radio-Canada",
+              "codeName": "Radio-Canada"
+            }
+          ],
+          "imageCollection": "",
+          "concreteImages": [
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/1x1/universite-windsor-pavillon-arts.jpg"
+              },
+              "width": 3023,
+              "height": 3024,
+              "dimensionRatio": "1:1"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/16x9/universite-windsor-pavillon-arts.jpg"
+              },
+              "width": 4031,
+              "height": 2268,
+              "dimensionRatio": "16:9"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/17x6/universite-windsor-pavillon-arts.jpg"
+              },
+              "width": 4031,
+              "height": 1423,
+              "dimensionRatio": "17:6"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/2x3/universite-windsor-pavillon-arts.jpg"
+              },
+              "width": 2015,
+              "height": 3024,
+              "dimensionRatio": "2:3"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/4x3/universite-windsor-pavillon-arts.jpg"
+              },
+              "width": 4031,
+              "height": 3024,
+              "dimensionRatio": "4:3"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/perso/universite-windsor-pavillon-arts.jpg"
+              },
+              "width": 4031,
+              "height": 3024,
+              "dimensionRatio": "perso"
+            }
+          ]
+        },
+        "relatedContents": [],
+        "contentTypeClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles"
+        },
+        "publishedLastTimeAt": "2018-03-23T16:03:16.000Z"
+      },
+      {
+        "$type": "RC.Neuro.Dtos.v1.FutureContentItemSummary, RC.Neuro.Dtos",
+        "selfLink": {
+          "href": "https://services.radio-canada.ca/hackathon/neuro/v1/news-stories/1091016"
+        },
+        "canonicalWebLink": {
+          "href": "http://ici.radio-canada.ca/nouvelle/1091016/jagmeet-singh-communaute-sikhe-npd-tourmente"
+        },
+        "contentType": {
+          "id": "11",
+          "name": "Nouvelle"
+        },
+        "id": "1091016",
+        "primaryClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles",
+          "codeName": "nouvelle"
+        },
+        "title": "Jagmeet Singh dans la tourmente : qu'en pense la communauté sikhe?",
+        "summary": "<p>Depuis des jours, le chef du Nouveau Parti démocratique (NPD) tente de clarifier sa position sur le séparatisme sikh. Sa présence à des événements controversés a soulevé de nombreuses questions. Quelle trace cet épisode va-t-il laisser dans la communauté sikhe? Coup de sonde à Brampton, là où Jagmeet Singh a été élu la première fois comme député provincial.</p>",
+        "outOfContextTitle": "Les positions controversées du chef du NPD Jagmeet Singh sur le séparatisme sikh suscitent des réactions dans la communauté de Brampton, en Ontario",
+        "kicker": "",
+        "futurePublishedLastTimeAt": "2018-03-23T08:40:44.000Z",
+        "template": null,
+        "themeTag": {
+          "id": "13",
+          "name": "Politique"
+        },
+        "subThemeTags": [
+          {
+            "id": "101",
+            "name": "Politique fédérale"
+          }
+        ],
+        "regionTags": [],
+        "isOfRegionalInterestOnly": false,
+        "subjectTags": [],
+        "customTags": [],
+        "sector": {
+          "id": "1",
+          "name": "Info"
+        },
+        "subSector": {
+          "id": "1",
+          "name": "Info National"
+        },
+        "broadcastableItem": null,
+        "signatures": [],
+        "referredContent": null,
+        "summaryMultimediaItem": {
+          "$type": "RC.Neuro.Dtos.v1.Media, RC.Neuro.Dtos",
+          "selfLink": {
+            "href": "https://services.radio-canada.ca/hackathon/neuro/v1/media/7873173"
+          },
+          "contentType": {
+            "id": "1",
+            "name": "Média"
+          },
+          "futureId": "7873173",
+          "contentSubtype": {
+            "id": "3",
+            "name": "Vidéo - extrait",
+            "codeName": "video"
+          },
+          "primaryClassificationTag": {
+            "id": "16",
+            "name": "Reportage",
+            "codeName": "reportage"
+          },
+          "title": "Le reportage de Louis Blouin",
+          "futureDuration": 157,
+          "seekTime": 0,
+          "isExternalPlayAllowed": false,
+          "downloadableFile": null,
+          "summary": "<p>La dernière semaine n'a pas été de tout repos pour Jagmeet Singh. Le chef du NPD nage toujours en pleine controverse en raison de sa participation à des rassemblements pour l'indépendance sikhe. Un sujet délicat, même au sein de la communauté. Et pourtant, plusieurs sikhs se portent à la défense du politicien.  Louis Blouin est allé à leur rencontre.</p>",
+          "summaryImage": {
+            "contentType": {
+              "id": "19",
+              "name": "Image (Picto)"
+            },
+            "alt": "Jagmeet Singh s’adressant aux délégués et partisans lors du congrès du NPD de la Colombie-Britannique",
+            "legend": "Jagmeet Singh s’adressant aux délégués et partisans lors du congrès du NPD de la Colombie-Britannique",
+            "imageCredits": "CHAD HIPOLITO",
+            "pressAgencies": [
+              {
+                "id": null,
+                "name": "La Presse canadienne",
+                "codeName": "La Presse canadienne"
+              }
+            ],
+            "imageCollection": "",
+            "concreteImages": [
+              {
+                "mediaLink": {
+                  "href": "https://images.radio-canada.ca/v1/ici-info/1x1/jagmeet-singh-leader-npd.jpg"
+                },
+                "width": 1999,
+                "height": 1999,
+                "dimensionRatio": "1:1"
+              },
+              {
+                "mediaLink": {
+                  "href": "https://images.radio-canada.ca/v1/ici-info/16x9/jagmeet-singh-leader-npd.jpg"
+                },
+                "width": 2999,
+                "height": 1687,
+                "dimensionRatio": "16:9"
+              },
+              {
+                "mediaLink": {
+                  "href": "https://images.radio-canada.ca/v1/ici-info/17x6/jagmeet-singh-leader-npd.jpg"
+                },
+                "width": 2999,
+                "height": 1058,
+                "dimensionRatio": "17:6"
+              },
+              {
+                "mediaLink": {
+                  "href": "https://images.radio-canada.ca/v1/ici-info/2x3/jagmeet-singh-leader-npd.jpg"
+                },
+                "width": 1332,
+                "height": 1998,
+                "dimensionRatio": "2:3"
+              },
+              {
+                "mediaLink": {
+                  "href": "https://images.radio-canada.ca/v1/ici-info/4x3/jagmeet-singh-leader-npd.jpg"
+                },
+                "width": 2665,
+                "height": 1999,
+                "dimensionRatio": "4:3"
+              },
+              {
+                "mediaLink": {
+                  "href": "https://images.radio-canada.ca/v1/ici-info/perso/jagmeet-singh-leader-npd.jpg"
+                },
+                "width": 2999,
+                "height": 2000,
+                "dimensionRatio": "perso"
+              }
+            ]
+          },
+          "broadcastedFirstTimeAt": "2018-03-23T03:19:38.000Z",
+          "credits": "",
+          "id": "medianet-7873173",
+          "type": "video",
+          "duration": "00:02:37",
+          "contentTypeClassificationTag": {
+            "id": "1000003",
+            "name": "Vidéo - extrait"
+          }
+        },
+        "relatedContents": [],
+        "contentTypeClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles"
+        },
+        "publishedLastTimeAt": "2018-03-23T08:40:44.000Z"
+      },
+      {
+        "$type": "RC.Neuro.Dtos.v1.FutureContentItemSummary, RC.Neuro.Dtos",
+        "selfLink": {
+          "href": "https://services.radio-canada.ca/hackathon/neuro/v1/news-stories/1090984"
+        },
+        "canonicalWebLink": {
+          "href": "http://ici.radio-canada.ca/nouvelle/1090984/north-bay-sante-ontario-toronto-clinique-soins"
+        },
+        "contentType": {
+          "id": "11",
+          "name": "Nouvelle"
+        },
+        "id": "1090984",
+        "primaryClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles",
+          "codeName": "nouvelle"
+        },
+        "title": "La popularité des cliniques privées fait réagir à Queen's Park",
+        "summary": "<p>À North Bay, une clinique offre des soins payants qui sont accessibles plus rapidement. </p>",
+        "outOfContextTitle": "La popularité des cliniques privées fait réagir à Queen's Park",
+        "kicker": "",
+        "futurePublishedLastTimeAt": "2018-03-22T23:16:15.000Z",
+        "template": null,
+        "themeTag": {
+          "id": "8",
+          "name": "Santé"
+        },
+        "subThemeTags": [],
+        "regionTags": [
+          {
+            "id": "26",
+            "name": "Nord de l'Ontario"
+          },
+          {
+            "id": "27",
+            "name": "Toronto"
+          },
+          {
+            "id": "28",
+            "name": "Windsor"
+          }
+        ],
+        "isOfRegionalInterestOnly": false,
+        "subjectTags": [],
+        "customTags": [
+          {
+            "category": {
+              "id": "f0a27ed8-5260-41dd-81b8-97365f8624ea",
+              "name": "Régions"
+            },
+            "id": "89ac6c3e-fd4d-42ab-b7a3-fb97fbf5c341",
+            "name": "Tout l'Ontario"
+          }
+        ],
+        "sector": {
+          "id": "1",
+          "name": "Info"
+        },
+        "subSector": {
+          "id": "24",
+          "name": "Toronto"
+        },
+        "broadcastableItem": null,
+        "signatures": [],
+        "referredContent": null,
+        "summaryMultimediaItem": {
+          "$type": "RC.Neuro.Dtos.v1.Media, RC.Neuro.Dtos",
+          "selfLink": {
+            "href": "https://services.radio-canada.ca/hackathon/neuro/v1/media/7873089"
+          },
+          "contentType": {
+            "id": "1",
+            "name": "Média"
+          },
+          "futureId": "7873089",
+          "contentSubtype": {
+            "id": "3",
+            "name": "Vidéo - extrait",
+            "codeName": "video"
+          },
+          "primaryClassificationTag": {
+            "id": "12",
+            "name": "Nouvelles",
+            "codeName": "nouvelle"
+          },
+          "title": "Des soins de santé payants font réagir les partis d'opposition",
+          "futureDuration": 194,
+          "seekTime": 0,
+          "isExternalPlayAllowed": false,
+          "downloadableFile": null,
+          "summary": "<p>À North Bay, une clinique a trouvé une solution payante pour permettre aux patients d'avoir accès plus rapidement à un traitement. Cela fait réagir les partis d'opposition à Queen's Park.</p>",
+          "summaryImage": {
+            "contentType": {
+              "id": "21",
+              "name": "Image non indexée"
+            },
+            "alt": "",
+            "legend": "",
+            "imageCredits": "",
+            "pressAgencies": [],
+            "imageCollection": "",
+            "concreteImages": [
+              {
+                "mediaLink": {
+                  "href": "https://ici.radio-canada.ca/audio-video/lib/img/extraits/HR/2018-03-22_18_36_02_TJONT_0004_01_01.jpeg"
+                },
+                "width": 640,
+                "height": 360,
+                "dimensionRatio": "16:9"
+              },
+              {
+                "mediaLink": {
+                  "href": "https://ici.radio-canada.ca/audio-video/lib/img/extraits/MR/2018-03-22_18_36_02_TJONT_0004_01_01.jpeg"
+                },
+                "width": 240,
+                "height": 135,
+                "dimensionRatio": "16:9"
+              },
+              {
+                "mediaLink": {
+                  "href": "https://ici.radio-canada.ca/audio-video/lib/img/extraits/BR/2018-03-22_18_36_02_TJONT_0004_01_01.jpeg"
+                },
+                "width": 64,
+                "height": 36,
+                "dimensionRatio": "16:9"
+              }
+            ]
+          },
+          "broadcastedFirstTimeAt": "2018-03-22T22:36:02.000Z",
+          "credits": "",
+          "id": "medianet-7873089",
+          "type": "video",
+          "duration": "00:03:14",
+          "contentTypeClassificationTag": {
+            "id": "1000003",
+            "name": "Vidéo - extrait"
+          }
+        },
+        "relatedContents": [],
+        "contentTypeClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles"
+        },
+        "publishedLastTimeAt": "2018-03-22T23:16:15.000Z"
+      },
+      {
+        "$type": "RC.Neuro.Dtos.v1.FutureContentItemSummary, RC.Neuro.Dtos",
+        "selfLink": {
+          "href": "https://services.radio-canada.ca/hackathon/neuro/v1/news-stories/1090935"
+        },
+        "canonicalWebLink": {
+          "href": "http://ici.radio-canada.ca/nouvelle/1090935/charles-sousa-sexcuse-davoir-qualifie-des-infirmieres-d-eye-candy"
+        },
+        "contentType": {
+          "id": "11",
+          "name": "Nouvelle"
+        },
+        "id": "1090935",
+        "primaryClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles",
+          "codeName": "nouvelle"
+        },
+        "title": "Charles Sousa s'excuse d'avoir qualifié des infirmières d'«&nbsp;eye candy&nbsp;»",
+        "summary": "<p>Le ministre des Finances de l'Ontario présente ses excuses après avoir qualifié des infirmières d'&laquo;&nbsp;eye candy&nbsp;&raquo;, ou &laquo;&nbsp;régal pour les yeux&nbsp;&raquo; lors d'une annonce jeudi.</p>",
+        "outOfContextTitle": "Charles Sousa s'excuse d'avoir qualifié des infirmières d'« eye candy »",
+        "kicker": "",
+        "futurePublishedLastTimeAt": "2018-03-22T20:02:14.000Z",
+        "template": null,
+        "themeTag": {
+          "id": "13",
+          "name": "Politique"
+        },
+        "subThemeTags": [
+          {
+            "id": "102",
+            "name": "Politique provinciale"
+          }
+        ],
+        "regionTags": [
+          {
+            "id": "12",
+            "name": "Ottawa–Gatineau"
+          },
+          {
+            "id": "26",
+            "name": "Nord de l'Ontario"
+          },
+          {
+            "id": "27",
+            "name": "Toronto"
+          },
+          {
+            "id": "28",
+            "name": "Windsor"
+          }
+        ],
+        "isOfRegionalInterestOnly": false,
+        "subjectTags": [],
+        "customTags": [
+          {
+            "category": {
+              "id": "f0a27ed8-5260-41dd-81b8-97365f8624ea",
+              "name": "Régions"
+            },
+            "id": "89ac6c3e-fd4d-42ab-b7a3-fb97fbf5c341",
+            "name": "Tout l'Ontario"
+          }
+        ],
+        "sector": {
+          "id": "1",
+          "name": "Info"
+        },
+        "subSector": {
+          "id": "24",
+          "name": "Toronto"
+        },
+        "broadcastableItem": null,
+        "signatures": [],
+        "referredContent": null,
+        "summaryMultimediaItem": {
+          "$type": "RC.Neuro.Dtos.v1.ConceptualImage, RC.Neuro.Dtos",
+          "contentType": {
+            "id": "19",
+            "name": "Image (Picto)"
+          },
+          "alt": "Le ministre Sousa au podium devant des employés du secteur de la santé.",
+          "legend": "C'est lors de cette annonce à l'Hôpital général de North York que le ministre Charles Sousa a qualifié le personnel hospitalier derrière lui de « eye candy ».",
+          "imageCredits": "",
+          "pressAgencies": [
+            {
+              "id": null,
+              "name": "Radio-Canada",
+              "codeName": "Radio-Canada"
+            }
+          ],
+          "imageCollection": "",
+          "concreteImages": [
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/1x1/charles-sousa-commentaire-eye-candy-north-york.png"
+              },
+              "width": 1079,
+              "height": 1080,
+              "dimensionRatio": "1:1"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/16x9/charles-sousa-commentaire-eye-candy-north-york.png"
+              },
+              "width": 1919,
+              "height": 1080,
+              "dimensionRatio": "16:9"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/17x6/charles-sousa-commentaire-eye-candy-north-york.png"
+              },
+              "width": 1919,
+              "height": 677,
+              "dimensionRatio": "17:6"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/2x3/charles-sousa-commentaire-eye-candy-north-york.png"
+              },
+              "width": 719,
+              "height": 1080,
+              "dimensionRatio": "2:3"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/4x3/charles-sousa-commentaire-eye-candy-north-york.png"
+              },
+              "width": 1439,
+              "height": 1080,
+              "dimensionRatio": "4:3"
+            },
+            {
+              "mediaLink": {
+                "href": "https://images.radio-canada.ca/v1/ici-info/perso/charles-sousa-commentaire-eye-candy-north-york.png"
+              },
+              "width": 1919,
+              "height": 1080,
+              "dimensionRatio": "perso"
+            }
+          ]
+        },
+        "relatedContents": [],
+        "contentTypeClassificationTag": {
+          "id": "12",
+          "name": "Nouvelles"
+        },
+        "publishedLastTimeAt": "2018-03-22T20:02:14.000Z"
+      }
+    ]
+  }
+}
