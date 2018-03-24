@@ -129,44 +129,37 @@ public class Main {
 
 
     public static void main(String[] args) {
-        int xd = 0, i= 1;
+        int xd = 0, i = 0;
+
+        LineupList lineupList = new LineupList("https://services.radio-canada.ca/hackathon/neuro/v1/future/lineups/");
+        JSONArray lineupArray = lineupList.getItems();
+
         while (xd == 0) {
-            fillSQLWithLineupID(i);
 
+            Lineup lineup = new Lineup(getLink(lineupArray, i));
+
+            JSONArray items = lineup.getItems();
+            for (int j = 0; j < items.length(); j++) {
+                try {
+                    News news = new News(getLink(items, j));
+                    System.out.println("i : " + i + " --Pushing ID: " + news.getID() + " Title: " + news.getTitle() + " URL: " + news.getURL() + " lenght: " + items.length());
+                    news.pushToSQL();
+                }
+                catch (Exception e){
+
+                }
+            }
+
+
+            System.out.println("FINISHED PUSING LINEUP ID: " + i);
             i++;
-            xd = okcancel("XD?");
         }
 
 
 
     }
 
-    public static void fillSQLWithLineupID(int id){
-        String link = "https://services.radio-canada.ca/hackathon/neuro/v1/future/lineups/475289?pageNumber=" + id;
-        Lineup lineup = new Lineup(link);
 
-        JSONArray items = lineup.getItems();
-
-        int boucleContinue = 0;
-        int i = 0;
-        while (boucleContinue == 0) {
-            try {
-                link = getLink(items, i);
-                News news = new News(link);
-                System.out.println("i : " + i + " --Pushing ID: " + news.getID() + " Title: " + news.getTitle() + " URL: " + news.getURL() + " lenght: " + items.length());
-                news.pushToSQL();
-            } catch (Exception e) {
-            }
-
-            i++;
-//            boucleContinue = okcancel("Get next news: " + i);
-
-            if (i >= items.length()) {
-                boucleContinue = 2;
-            }
-        }
-        System.out.println("\n\nFinished lineup id: " + id);
-    }
     public static int okcancel(String theMessage) {
         int result = JOptionPane.showConfirmDialog((Component) null, theMessage,
                 "alert", JOptionPane.OK_CANCEL_OPTION);

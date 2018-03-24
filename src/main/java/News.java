@@ -45,6 +45,7 @@ public class News extends JSONObject{
         String keywordsXD = Main.getCSVKeyWords(kwDoc);
 
         Connection.queryInsert(new String[]{"titre","keywords","click","lien","idArticle"}, new Object[]{titre, keywordsXD, nbClick, lien, articleID});
+
     }
 
     public String getSummary(){
