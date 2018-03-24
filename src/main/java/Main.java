@@ -153,5 +153,18 @@ public class Main {
         SharedCounts objClicker = new SharedCounts(news.getURL());
         nbClick = objClicker.getNbClick();
         System.out.println(nbClick);
+
+
+        String titre = news.getTitle();
+        int articleID = Integer.parseInt(news.getID());
+        Documents kwDoc = new Documents();
+        String summary = news.getSummary();
+        kwDoc.add(articleID + "", "fr", summary );
+        int click = nbClick;
+        String lien = news.getJSONObject("canonicalWebLink").getString("href");
+        String keywordsXD = getCSVKeyWords(kwDoc);
+
+        Connection.queryInsert(new String[]{"titre","keywords","click","lien","idArticle"}, new Object[]{titre, keywordsXD, click, lien, articleID});
+
     }
 }
