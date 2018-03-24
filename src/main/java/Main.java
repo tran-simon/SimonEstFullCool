@@ -80,6 +80,11 @@ public class Main {
         String path = "items.csv";
         writeCSVToFile(CDL.toString(items), new File(path));
         System.out.println(getLink(items, 1));
+
+
+        String link = getLink(items, 1);
+        News news = new News(link);
+        System.out.println(news.getBody());
 //        News news = new News(items);
     }
 }

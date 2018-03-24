@@ -1,9 +1,10 @@
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
+import org.json.JSONObject;
 
 public class News {
-    String body = "";
+    private String body = "";
 
     public News(String link) {
         getBody(link);
@@ -26,5 +27,16 @@ public class News {
         }
 
 
+    }
+
+    public JSONObject getBodyObject(){
+        return new JSONObject(body);
+    }
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
     }
 }
