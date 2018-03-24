@@ -28,6 +28,25 @@ public class News extends JSONObject{
         return body;
 
     }
+
+
+    public void pushToSQL(){
+
+        SharedCounts objClicker = new SharedCounts(this.getURL());
+        int nbClick = objClicker.getNbClick();
+
+
+        String titre = this.getTitle();
+        int articleID = Integer.parseInt(this.getID());
+        Documents kwDoc = new Documents();
+        String summary = this.getSummary();
+        kwDoc.add(articleID + "", "fr", summary );
+        String lien = this.getJSONObject("canonicalWebLink").getString("href");
+        String keywordsXD = Main.getCSVKeyWords(kwDoc);
+
+        Connection.queryInsert(new String[]{"titre","keywords","click","lien","idArticle"}, new Object[]{titre, keywordsXD, nbClick, lien, articleID});
+    }
+
     public String getSummary(){
         return this.getString("summary");
     }
@@ -49,7 +68,7 @@ public class News extends JSONObject{
     }
     public String getURL() {
         JSONObject jsonObj = this.getJSONObject("canonicalWebLink");
-        
+
         return jsonObj.getString("href");
     }
 }

@@ -38,7 +38,7 @@ public class Connection {
                 textCols += ",";
             }
         }
-        System.out.println(textVals +"    "+ textCols);
+//        System.out.println(textVals +"    "+ textCols);
 
         try {
             connection = DriverManager.getConnection(url);
@@ -51,13 +51,12 @@ public class Connection {
 
                 // Print results from select statement
                 while (resultSet.next()) {
-                    System.out.println(resultSet.getString(1) + " "
-                            + resultSet.getString(2));
+//                    System.out.println(resultSet.getString(1) + " "
+//                            + resultSet.getString(2));
                 }
                 connection.close();
             }
         } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 }

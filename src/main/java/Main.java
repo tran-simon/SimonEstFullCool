@@ -1,4 +1,6 @@
 import com.google.gson.Gson;
+
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -9,23 +11,25 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
+import javax.sound.midi.Soundbank;
+import javax.swing.*;
+
 import org.json.CDL;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 
-
 public class Main {
-  
+
     final static String API_KEY = "feb29daae1dc4f2eb888862eb560400d";
     final static String HOST = "https://westcentralus.api.cognitive.microsoft" +
-                               ".com";
+            ".com";
     final static String PATH = "/text/analytics/v2.0/keyPhrases";
 
-    public static  String getKeyPhrases (Documents documents) throws Exception {
+    public static String getKeyPhrases(Documents documents) throws Exception {
         String text = new Gson().toJson(documents);
-        byte[] encodedText = text.getBytes ("UTF-8");
-        URL                url        = new URL(HOST + PATH);
+        byte[] encodedText = text.getBytes("UTF-8");
+        URL url = new URL(HOST + PATH);
         HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
         connection.setRequestMethod("POST");
         connection.setRequestProperty("Content-Type", "text/json");
@@ -37,9 +41,9 @@ public class Main {
         wr.flush();
         wr.close();
 
-        StringBuilder response = new StringBuilder ();
+        StringBuilder response = new StringBuilder();
         BufferedReader in = new BufferedReader(
-            new InputStreamReader(connection.getInputStream()));
+                new InputStreamReader(connection.getInputStream()));
         String line;
         while ((line = in.readLine()) != null) {
             response.append(line);
@@ -48,36 +52,36 @@ public class Main {
 
         return response.toString();
     }
-  
+
     public static String getCSVKeyWords(Documents documents) {
         String response = "";
         try {
-            response = getKeyPhrases (documents);
+            response = getKeyPhrases(documents);
         } catch (Exception e) {
-            System.err.println ("Error: Couldn't get keywords from APi.");
-            StringBuilder sb = new StringBuilder ();
-            for (int i = 0; i < documents.documents.size (); ++i) {
-                sb.append (documents.documents.get (i).id + '\n');
+            System.err.println("Error: Couldn't get keywords from APi.");
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < documents.documents.size(); ++i) {
+                sb.append(documents.documents.get(i).id + '\n');
             }
-            System.err.print ("IDs: " + sb);
+            System.err.print("IDs: " + sb);
             return "";
         }
 
-        JSONObject jsonResponse = new JSONObject (response);
-        JSONObject docs = jsonResponse.getJSONArray ("documents")
-            .optJSONObject (0);
-        JSONArray keyWords = docs.getJSONArray ("keyPhrases");
+        JSONObject jsonResponse = new JSONObject(response);
+        JSONObject docs = jsonResponse.getJSONArray("documents")
+                .optJSONObject(0);
+        JSONArray keyWords = docs.getJSONArray("keyPhrases");
 
-        StringBuilder sb = new StringBuilder ();
-        for (int i = 0; i < keyWords.length (); ++i) {
-            sb.append (keyWords.getString (i) + ',');
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < keyWords.length(); ++i) {
+            sb.append(keyWords.getString(i) + ',');
         }
 
         // remove last comma
-        sb.deleteCharAt (sb.length () - 1);
-        return sb.toString ();
+        sb.deleteCharAt(sb.length() - 1);
+        return sb.toString();
     }
-  
+
     public static void writeCSVToFile(String csv, File file) {
         file.delete();
 
@@ -119,52 +123,56 @@ public class Main {
         return CDL.toString(object);
     }
 
-    public static String getLink(JSONArray items, int id){
+    public static String getLink(JSONArray items, int id) {
         return items.getJSONObject(id).getJSONObject("selfLink").getString("href");
     }
 
 
-
     public static void main(String[] args) {
-        int nbClick = 0;
-        String link = "https://services.radio-canada.ca/hackathon/neuro/v1/future/lineups/475289?pageNumber=1";
+        int xd = 0, i= 1;
+        while (xd == 0) {
+            fillSQLWithLineupID(i);
+
+            i++;
+            xd = okcancel("XD?");
+        }
+
+
+
+    }
+
+    public static void fillSQLWithLineupID(int id){
+        String link = "https://services.radio-canada.ca/hackathon/neuro/v1/future/lineups/475289?pageNumber=" + id;
         Lineup lineup = new Lineup(link);
 
         JSONArray items = lineup.getItems();
 
-        link = getLink(items, 3);
-        News news = new News(link);
+        int boucleContinue = 0;
+        int i = 0;
+        while (boucleContinue == 0) {
+            try {
+                link = getLink(items, i);
+                News news = new News(link);
+                System.out.println("i : " + i + " --Pushing ID: " + news.getID() + " Title: " + news.getTitle() + " URL: " + news.getURL() + " lenght: " + items.length());
+                news.pushToSQL();
+            } catch (Exception e) {
+            }
 
-        writeToFile("XD.html", news.getHTML());
+            i++;
+//            boucleContinue = okcancel("Get next news: " + i);
 
-        System.out.println(news);
-        System.out.println(news.names());
-
-        System.out.println(news.getSummary() + "");
-        System.out.println(news.getTitle());
-        String keywords = " tseting testing TEST HACKATHON";
-        // Connection.queryInsert(keywords,  news.getTitle(), 2);
-
-        // keyword query use example
-        Documents documents = new Documents ();
-        documents.add ("1", "en", "I really enjoy the new XBox One S. It has a clean look, it has 4K/HDR resolution and it is affordable.");
-        System.out.println (getCSVKeyWords (documents));
-      
-        SharedCounts objClicker = new SharedCounts(news.getURL());
-        nbClick = objClicker.getNbClick();
-        System.out.println(nbClick);
-
-
-        String titre = news.getTitle();
-        int articleID = Integer.parseInt(news.getID());
-        Documents kwDoc = new Documents();
-        String summary = news.getSummary();
-        kwDoc.add(articleID + "", "fr", summary );
-        int click = nbClick;
-        String lien = news.getJSONObject("canonicalWebLink").getString("href");
-        String keywordsXD = getCSVKeyWords(kwDoc);
-
-        Connection.queryInsert(new String[]{"titre","keywords","click","lien","idArticle"}, new Object[]{titre, keywordsXD, click, lien, articleID});
-
+            if (i >= items.length()) {
+                boucleContinue = 2;
+            }
+        }
+        System.out.println("\n\nFinished lineup id: " + id);
     }
+    public static int okcancel(String theMessage) {
+        int result = JOptionPane.showConfirmDialog((Component) null, theMessage,
+                "alert", JOptionPane.OK_CANCEL_OPTION);
+        //OK:0, cancel:2
+        return result;
+    }
+
+
 }
