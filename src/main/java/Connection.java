@@ -2,11 +2,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class Connection {
-
-    public static void main(String[] arsg){
-        queryInsert("test,test1", "Les test sont des test qui test", 100);
-    }
+public class Connection 
 
     public static void queryInsert(String keywords, String titre, int click){
         String hostName = "testai1.database.windows.net";
