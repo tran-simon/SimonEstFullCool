@@ -69,9 +69,17 @@ public class Main {
         return bodyString;
     }
 
+
+
+
+    public static String getLink(JSONArray items, int id){
+        return items.getJSONObject(id).getJSONObject("selfLink").getString("href");
+    }
     public static void main(String[] args) {
         JSONArray items = getItems(getBodyString());
         String path = "items.csv";
         writeCSVToFile(CDL.toString(items), new File(path));
+        System.out.println(getLink(items, 1));
+//        News news = new News(items);
     }
 }
