@@ -173,8 +173,14 @@ public class Main {
         LineupList lineupList = new LineupList("https://services.radio-canada.ca/hackathon/neuro/v1/future/lineups/");
         JSONArray lineupArray = lineupList.getItems();
 
+        int i1 = 0;
+        try {
+            i1 = Integer.parseInt(args[0]);
+        } catch (Exception e) {
 
-        for (int i = 453; i < lineupArray.length(); i++) {
+        }
+        System.out.println("I1: " + i1);
+        for (int i = i1; i < lineupArray.length(); i++) {
 
             try {
                 Lineup lineup = new Lineup(getLink(lineupArray, i));
