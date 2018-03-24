@@ -1,40 +1,19 @@
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import com.mashape.unirest.http.HttpResponse;
-import com.mashape.unirest.http.Unirest;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
 import org.json.CDL;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.util.ArrayList;
 
-class Document {
-    public String id, language, text;
 
-    public Document(String id, String language, String text){
-        this.id = id;
-        this.language = language;
-        this.text = text;
-    }
-}
-
-class Documents {
-    public List<Document> documents;
-
-    public Documents() {
-        this.documents = new ArrayList<Document> ();
-    }
-    public void add(String id, String language, String text) {
-        this.documents.add (new Document (id, language, text));
-    }
-}
 
 public class Main {
   
@@ -162,9 +141,8 @@ public class Main {
         System.out.println(news.getSummary() + "");
         System.out.println(news.getTitle());
         String keywords = " tseting testing TEST HACKATHON";
-        Connection.queryInsert(keywords,  news.getTitle(), 2);
         // Connection.queryInsert(keywords,  news.getTitle(), 2);
-      
+
         // keyword query use example
         Documents documents = new Documents ();
         documents.add ("1", "en", "I really enjoy the new XBox One S. It has a clean look, it has 4K/HDR resolution and it is affordable.");
