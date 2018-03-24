@@ -49,28 +49,28 @@ public class Main {
     }
 
 
-
-
+    public static String getCSVString(JSONArray object) {
+        return CDL.toString(object);
+    }
 
     public static String getLink(JSONArray items, int id){
         return items.getJSONObject(id).getJSONObject("selfLink").getString("href");
     }
-    public static void main(String[] args) {
 
+
+    public static void main(String[] args) {
         String link = "https://services.radio-canada.ca/hackathon/neuro/v1/future/lineups/475289?pageNumber=1";
         Lineup lineup = new Lineup(link);
+
         JSONArray items = lineup.getItems();
-        String path = "items.csv";
-        writeCSVToFile(CDL.toString(items), new File(path));
 
         link = getLink(items, 0);
         News news = new News(link);
-        System.out.println(news.toString());
-        System.out.println(news.getTitle());
-        System.out.println(news.getID());
-        System.out.println(news.getString("summary"));
-        System.out.println(news.getHTML());
+
         writeToFile("XD.html", news.getHTML());
-//        News news = new News(items);
+
+
+        System.out.println("TESTING BRANCH");
+        System.out.println(news.names());
     }
 }
