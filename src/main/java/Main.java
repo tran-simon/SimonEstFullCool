@@ -14,6 +14,7 @@ import javax.net.ssl.HttpsURLConnection;
 import javax.sound.midi.Soundbank;
 import javax.swing.*;
 
+import org.apache.http.impl.nio.reactor.ExceptionEvent;
 import org.json.CDL;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -127,34 +128,37 @@ public class Main {
         return items.getJSONObject(id).getJSONObject("selfLink").getString("href");
     }
 
+    public static void pushItems(JSONArray items) {
+        for (int j = 0; j < items.length(); j++) {
+            try {
+                News news = new News(getLink(items, j));
+                System.out.println( " --Pushing ID: " + news.getID() + " Title: " + news.getTitle() + " URL: " + news.getURL() + " lenght: " + items.length());
+                news.pushToSQL();
+            } catch (Exception e) {
 
-    public static void main(String[] args) {
-        int xd = 0, i = 0;
+            }
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
 
         LineupList lineupList = new LineupList("https://services.radio-canada.ca/hackathon/neuro/v1/future/lineups/");
         JSONArray lineupArray = lineupList.getItems();
 
-        while (xd == 0) {
 
-            Lineup lineup = new Lineup(getLink(lineupArray, i));
+        for (int i = 0; i < lineupArray.length(); i++) {
 
-            JSONArray items = lineup.getItems();
-            for (int j = 0; j < items.length(); j++) {
-                try {
-                    News news = new News(getLink(items, j));
-                    System.out.println("i : " + i + " --Pushing ID: " + news.getID() + " Title: " + news.getTitle() + " URL: " + news.getURL() + " lenght: " + items.length());
-                    news.pushToSQL();
-                }
-                catch (Exception e){
+            try {
+                Lineup lineup = new Lineup(getLink(lineupArray, i));
+                System.out.println("\ni: " + i + " Name: " + lineup.getString("name") + " Lenght: " + lineupArray.length() + " id: " + lineup.getString("id") );
+                pushItems(lineup.getItems());
 
-                }
+
+                System.out.println("FINISHED PUSING LINEUP ID: " + i);
+                i++;
+            } catch (Exception e) {
             }
-
-
-            System.out.println("FINISHED PUSING LINEUP ID: " + i);
-            i++;
         }
-
 
 
     }
