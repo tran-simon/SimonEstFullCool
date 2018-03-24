@@ -28,6 +28,9 @@ public class News extends JSONObject{
         return body;
 
     }
+    public String getSummary(){
+        return this.getString("summary");
+    }
 
     public String getTitle(){
         return this.getString("title");

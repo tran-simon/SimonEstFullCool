@@ -64,13 +64,17 @@ public class Main {
 
         JSONArray items = lineup.getItems();
 
-        link = getLink(items, 0);
+        link = getLink(items, 3);
         News news = new News(link);
 
         writeToFile("XD.html", news.getHTML());
 
-
-        System.out.println("TESTING BRANCH");
+        System.out.println(news);
         System.out.println(news.names());
+
+        System.out.println(news.getSummary() + "");
+        System.out.println(news.getTitle());
+        String keywords = " tseting testing TEST HACKATHON";
+        Connection.queryInsert(keywords,  news.getTitle(), 2);
     }
 }
