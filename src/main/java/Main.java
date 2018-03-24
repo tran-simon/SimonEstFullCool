@@ -124,7 +124,9 @@ public class Main {
     }
 
 
+
     public static void main(String[] args) {
+        int nbClick = 0;
         String link = "https://services.radio-canada.ca/hackathon/neuro/v1/future/lineups/475289?pageNumber=1";
         Lineup lineup = new Lineup(link);
 
@@ -147,5 +149,9 @@ public class Main {
         Documents documents = new Documents ();
         documents.add ("1", "en", "I really enjoy the new XBox One S. It has a clean look, it has 4K/HDR resolution and it is affordable.");
         System.out.println (getCSVKeyWords (documents));
+      
+        SharedCounts objClicker = new SharedCounts(news.getURL());
+        nbClick = objClicker.getNbClick();
+        System.out.println(nbClick);
     }
 }
