@@ -37,4 +37,11 @@ public class News extends JSONObject{
         return this.getString("id");
     }
 
+    public JSONObject getBody(){
+        return this.getJSONObject("body");
+    }
+
+    public String getHTML(){
+        return getBody().getString("html");
+    }
 }

@@ -32,7 +32,7 @@ public class Main {
         }
     }
 
-    private static String readFile(String filePath) {
+    public static String readFile(String filePath) {
         StringBuilder contentBuilder = new StringBuilder();
         try {
             BufferedReader br = new BufferedReader(new FileReader(filePath));
@@ -45,6 +45,17 @@ public class Main {
             e.printStackTrace();
         }
         return contentBuilder.toString();
+    }
+
+    public static void writeToFile(String filePath, String content) {
+        try {
+            PrintWriter writer = new PrintWriter(filePath, "UTF-8");
+            writer.println(content);
+            writer.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static String getBodyString() {
@@ -86,6 +97,8 @@ public class Main {
         System.out.println(news.getTitle());
         System.out.println(news.getID());
         System.out.println(news.getString("summary"));
+        System.out.println(news.getHTML());
+        writeToFile("XD.html", news.getHTML());
 //        News news = new News(items);
     }
 }
