@@ -5,7 +5,7 @@ import java.sql.Statement;
 public class Connection {
 
     public static void main(String[] args){
-        queryInsert(new Object[]{"Test 1", 100, "Test 2"});
+        queryInsert(new String[]{"titre","keywords","click","lien","idArticle"}, new Object[]{"Test 1", "test1, test2, test3", 2, "http://thing.com", 10100});
     }
 
     /**
@@ -14,15 +14,15 @@ public class Connection {
      *
      * @param objs :
      */
-    public static void queryInsert(Object[] objs) {
+    public static void queryInsert(String[] inputs, Object[] objs) {
         String hostName = "testai1.database.windows.net";
         String dbName = "leo";
         String user = "leo";
         String password = "qwerty1234!";
         String url = String.format("jdbc:sqlserver://%s:1433;database=%s;user=%s;password=%s;encrypt=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;", hostName, dbName, user, password);
-        java.sql.Connection connection = null;
+    java.sql.Connection connection = null;
 
-        String[] colsName = {"keywords", "Click", "titre"};
+        String[] colsName = inputs;
         String textCols = "";
         String textVals = "";
         for(int i = 0; i < colsName.length; i++) {
@@ -40,11 +40,11 @@ public class Connection {
         }
         System.out.println(textVals +"    "+ textCols);
 
-        /*try {
+        try {
             connection = DriverManager.getConnection(url);
 
             // Create and execute a SELECT SQL statement.
-            String selectSql = String.format("INSERT INTO data(%s) VALUES(%s);", keywords, click, titre);
+            String selectSql = String.format("INSERT INTO data(%s) VALUES(%s);", textCols, textVals);
 
             try (Statement statement = connection.createStatement();
                  ResultSet resultSet = statement.executeQuery(selectSql)) {
@@ -58,6 +58,6 @@ public class Connection {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }*/
+        }
     }
 }
