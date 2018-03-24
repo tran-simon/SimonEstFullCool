@@ -163,6 +163,7 @@ public class Main {
         System.out.println(news.getTitle());
         String keywords = " tseting testing TEST HACKATHON";
         Connection.queryInsert(keywords,  news.getTitle(), 2);
+        // Connection.queryInsert(keywords,  news.getTitle(), 2);
       
         // keyword query use example
         Documents documents = new Documents ();

@@ -4,7 +4,17 @@ import java.sql.Statement;
 
 public class Connection {
 
-    public static void queryInsert(String keywords, String titre, int click) {
+    public static void main(String[] args){
+        queryInsert(new Object[]{"Test 1", 100, "Test 2"});
+    }
+
+    /**
+     *
+     *
+     *
+     * @param objs :
+     */
+    public static void queryInsert(Object[] objs) {
         String hostName = "testai1.database.windows.net";
         String dbName = "leo";
         String user = "leo";
@@ -12,11 +22,29 @@ public class Connection {
         String url = String.format("jdbc:sqlserver://%s:1433;database=%s;user=%s;password=%s;encrypt=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;", hostName, dbName, user, password);
         java.sql.Connection connection = null;
 
-        try {
+        String[] colsName = {"keywords", "Click", "titre"};
+        String textCols = "";
+        String textVals = "";
+        for(int i = 0; i < colsName.length; i++) {
+            textCols += colsName[i];
+            if(objs[i] instanceof Integer ){
+                textVals += objs[i].toString();
+            }
+            else
+                textVals += "\'" + objs[i].toString() + "\'";
+
+            if(i != colsName.length-1){
+                textVals += ",";
+                textCols += ",";
+            }
+        }
+        System.out.println(textVals +"    "+ textCols);
+
+        /*try {
             connection = DriverManager.getConnection(url);
 
             // Create and execute a SELECT SQL statement.
-            String selectSql = String.format("INSERT INTO data(keywords, click, titre) VALUES(\'%s\', %d, \'%s\');", keywords, click, titre);
+            String selectSql = String.format("INSERT INTO data(%s) VALUES(%s);", keywords, click, titre);
 
             try (Statement statement = connection.createStatement();
                  ResultSet resultSet = statement.executeQuery(selectSql)) {
@@ -30,6 +58,6 @@ public class Connection {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
     }
 }
