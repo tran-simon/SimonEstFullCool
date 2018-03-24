@@ -5,7 +5,7 @@ import java.sql.Statement;
 public class Connection {
 
     public static void main(String[] args){
-        queryInsert(new String[]{"titre","keywords","click","lien","idArticle"}, new Object[]{"Test 1", "test1, test2, test3", 2, "http://thing.com", 10100});
+        queryInsert(new String[]{"titre","keywords","click","lien","idArticle"}, new Object[]{"Test 3'", "test1, test'2, tes't3'", 2, "htt'p://thing.com", 10100});
     }
 
     /**
@@ -31,7 +31,7 @@ public class Connection {
                 textVals += objs[i].toString();
             }
             else
-                textVals += "\'" + objs[i].toString() + "\'";
+                textVals += "\'" + objs[i].toString().replace("'", "''") + "\'";
 
             if(i != colsName.length-1){
                 textVals += ",";
