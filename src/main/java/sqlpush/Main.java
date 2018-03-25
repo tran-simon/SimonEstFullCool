@@ -12,9 +12,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.URL;
+import java.util.Iterator;
 import javax.net.ssl.HttpsURLConnection;
 import javax.swing.*;
 
+import com.google.gson.JsonArray;
 import org.json.CDL;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -22,7 +24,7 @@ import org.json.JSONObject;
 
 public class Main {
 
-//    final static String API_KEY = "feb29daae1dc4f2eb888862eb560400d";
+    //    final static String API_KEY = "feb29daae1dc4f2eb888862eb560400d";
     final static String API_KEY = "7e5bcd096c4a4749818fdb0fa3aea0d3";
     final static String HOST = "https://westcentralus.api.cognitive.microsoft" +
             ".com";
@@ -130,40 +132,36 @@ public class Main {
         return items.getJSONObject(id).getJSONObject("selfLink").getString("href");
     }
 
-    public static void pushToSQL(String titre, String keywords, int nbClick, String lien, int articleID){
+    public static void pushToSQL(String titre, String keywords, int nbClick, String lien, int articleID) {
 
 
-
-        Connection.queryInsert(new String[]{"titre","keywords","click","lien","idArticle"}, new Object[]{titre, keywords, nbClick, lien, articleID});
+//        Connection.queryInsert(new String[]{"titre","keywords","click","lien","idArticle"}, new Object[]{titre, keywords, nbClick, lien, articleID});
 
     }
-    public static void pushItems(JSONArray items) {
+
+    public static void pushItems(JSONArray items, int lineupIndex) {
         for (int j = 0; j < items.length(); j++) {
             try {
                 JSONObject item = items.getJSONObject(j);
-
-
-
+                String[] inputs = new String[item.names().length()];
+                Object[] objects = new Object[inputs.length];
+                for (int i = 0; i < inputs.length; i++) {
+                    inputs[i] = item.names().getString(i);
+                    objects[i] = item.get(inputs[i]);
+                }
 
                 String lien = item.getJSONObject("canonicalWebLink").getString("href");
                 SharedCounts objClicker = new SharedCounts(lien);
-
                 int nbClick = objClicker.getNbClick();
 
-
                 String titre = item.getString("title");
+//                int articleID = Integer.parseInt(item.getString("id"));
+//                Documents kwDoc = new Documents();
+//                String summary = item.getString("summary");
+//                kwDoc.add(articleID + "", "fr", summary );
+                String keywordsXD = "";//Main.getCSVKeyWords(kwDoc) ;
 
-                int articleID = Integer.parseInt(item.getString("id"));
-                Documents kwDoc = new Documents();
-                String summary = item.getString("summary");
-
-                kwDoc.add(articleID + "", "fr", summary );
-                String keywordsXD = Main.getCSVKeyWords(kwDoc);
-
-
-                System.out.println( " --Pushing ID: " + articleID + " Title: " + titre + " URL: " + lien + " lenght: " + items.length());
-
-                pushToSQL(titre, keywordsXD, nbClick, lien, articleID);
+                Connection.queryInsert(inputs, objects, lineupIndex, titre, keywordsXD, nbClick);
             } catch (Exception e) {
 
             }
@@ -181,19 +179,24 @@ public class Main {
         } catch (Exception e) {
 
         }
-        i1=0;
-        System.out.println("I1: " + i1);
-        for (int i = i1; i < lineupArray.length(); i++) {
 
-            try {
-                Lineup lineup = new Lineup(getLink(lineupArray, i));
-                System.out.println("\ni: " + i + " Name: " + lineup.getString("name") + " Lenght: " + lineupArray.length() + " id: " + lineup.getString("id") );
-                pushItems(lineup.getItems());
+        while (true) {
+            for (int i = i1; i < lineupArray.length(); i++) {
 
+                try {
+                    Lineup lineup = new Lineup(getLink(lineupArray, i));
+                    System.out.println("\ni: " + i + " Name: " + lineup.getString("name") + " Lenght: " + lineupArray.length() + " id: " + lineup.getString("id") + " lineupID" + i);
+                    JSONArray items = lineup.getItems();
+                    pushItems(items, i);
 
-                System.out.println("FINISHED PUSING LINEUP ID: " + i);
-                i++;
-            } catch (Exception e) {
+                    System.out.println("FINISHED PUSING LINEUP ID: " + i);
+                    i++;
+                } catch (Exception e) {
+
+                    System.err.println(" ASDFASDGADG SDFGJ SDFJHSFHSDGF");
+                    i1 = i+2;
+
+                }
             }
         }
 
