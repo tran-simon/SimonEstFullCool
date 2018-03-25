@@ -60,6 +60,7 @@ public class Main {
             response = getKeyPhrases(documents);
         } catch (Exception e) {
             System.err.println("Error: Couldn't get keywords from APi.");
+            System.exit(0);
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < documents.documents.size(); ++i) {
                 sb.append(documents.documents.get(i).id + '\n');
@@ -179,6 +180,7 @@ public class Main {
         } catch (Exception e) {
 
         }
+        i1=0;
         System.out.println("I1: " + i1);
         for (int i = i1; i < lineupArray.length(); i++) {
 
