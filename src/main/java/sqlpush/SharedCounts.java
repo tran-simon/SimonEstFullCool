@@ -25,8 +25,10 @@ import org.json.JSONObject;
 public class SharedCounts {
     private String url;
     private final String DOMAIN = "https://api.sharedcount.com/v1.0/";
-    private final String APIKEY = "83fcad976cc23fc8868c7d4e9d78994f8b887fce";
-    
+
+    private final String APIKEY = "546bdf84dbe358c97e73257b749b34430f553cb8";
+//    private final String APIKEY = "83fcad976cc23fc8868c7d4e9d78994f8b887fce";
+
     
     public SharedCounts(String url) {
         this.url = url;

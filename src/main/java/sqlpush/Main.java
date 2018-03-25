@@ -22,7 +22,8 @@ import org.json.JSONObject;
 
 public class Main {
 
-    final static String API_KEY = "feb29daae1dc4f2eb888862eb560400d";
+//    final static String API_KEY = "feb29daae1dc4f2eb888862eb560400d";
+    final static String API_KEY = "7e5bcd096c4a4749818fdb0fa3aea0d3";
     final static String HOST = "https://westcentralus.api.cognitive.microsoft" +
             ".com";
     final static String PATH = "/text/analytics/v2.0/keyPhrases";
